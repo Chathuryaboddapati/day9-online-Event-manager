@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link style="border-radius: 100%;" rel="icon" href=
+    "https://tse1.mm.bing.net/th?id=OIP.sKn2VHtVY8kQ3SQGMULNRAHaHU&pid=Api&P=0&h=180"
+              type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><u>Chathu's Events</u></h1>
+    </header>
+
+    <section id="add-event-form">
+        <h2>Add New Event</h2>
+        <form id="event-form">
+            <label for="title">Event Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+        </form>
+            <button onclick="newEvent()" type="submit">Add Event</button>
+        
+    </section>
+
+    <div class="container">
+        <h2 style="font-family: 'Courier New', Courier, monospace;">Search Events</h2>
+        <input type="text" id="searchInput" style="margin-left: 0%;" placeholder="Search by title, date, or location"><br>
+        <button onclick="searchEvents()" style="margin-right: 70%;">Search</button>
+        <div id="searchResults"></div>
+      </div>
+
+      <section id="event-listing">
+        <h2 style="font-family: 'Courier New', Courier, monospace;">Upcoming Events</h2>
+        <br>
+        <div id="event-cards">
+            <!-- Event Cards will be dynamically generated here -->
+        </div>
+    </section>
+      
+    <footer>
+        <p>&copy; Chathu's Event Management Buro.
+            <br> All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
